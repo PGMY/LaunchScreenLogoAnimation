@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,59 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZW-FO-Vph" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Uvj-rM-oty">
+                                        <rect key="frame" x="38" y="292" width="300" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="2az-EX-2QS"/>
+                                            <constraint firstAttribute="width" constant="300" id="B9B-FQ-oYh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Uvj-rM-oty" firstAttribute="centerY" secondItem="WZW-FO-Vph" secondAttribute="centerY" id="52l-QJ-aaT"/>
+                                    <constraint firstItem="Uvj-rM-oty" firstAttribute="top" secondItem="WZW-FO-Vph" secondAttribute="top" id="CoH-p3-hgB"/>
+                                    <constraint firstItem="Uvj-rM-oty" firstAttribute="centerX" secondItem="WZW-FO-Vph" secondAttribute="centerX" id="iwM-5s-XWu"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CoH-p3-hgB"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="centerYConstraint" destination="52l-QJ-aaT" id="Dgn-b1-CY7"/>
+                                    <outlet property="heightConstraint" destination="2az-EX-2QS" id="MQZ-QW-sdm"/>
+                                    <outlet property="logoImage" destination="Uvj-rM-oty" id="gPA-zK-kUC"/>
+                                    <outlet property="topConstraint" destination="CoH-p3-hgB" id="2gL-Nl-QPR"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WZW-FO-Vph" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="02B-DT-3Xa"/>
+                            <constraint firstItem="WZW-FO-Vph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bsq-Xj-i81"/>
+                            <constraint firstItem="WZW-FO-Vph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" symbolic="YES" id="fcB-lC-xLk"/>
+                            <constraint firstItem="WZW-FO-Vph" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ljo-bD-T8W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="logoView" destination="WZW-FO-Vph" id="v5l-Ub-B49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="326" height="181"/>
+    </resources>
 </document>

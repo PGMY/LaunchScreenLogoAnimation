@@ -2,7 +2,7 @@
 //  LogoTests.swift
 //  LogoTests
 //
-//  Created by Mika Yamamoto on 2018/01/10.
+//  Created by PGMY on 2018/01/10.
 //  Copyright © 2018年 PGMY. All rights reserved.
 //
 
